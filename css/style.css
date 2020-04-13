@@ -1,0 +1,120 @@
+
+.container{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.card{
+  height: 0px;
+  background-color: black;
+}
+
+.cardFace1 {
+  background: white;
+  border-radius: 1.2rem 1.2rem 1.2rem 1.2rem;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  display: grid;
+  grid-template-areas: "heading" "image" ;
+  grid-template-columns: 15rem;
+  grid-template-rows: 4rem 14rem ;
+  text-align: center;
+  transform: translateY(18rem);
+  transition: 0.5s ease;
+  z-index: 1;
+}
+
+.cardFace2 {
+  border-radius: 1.2rem 1.2rem 1.2rem 1.2rem;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+  display: grid;
+  grid-template-areas:  "text" "button";
+  grid-template-columns: 15rem;
+  grid-template-rows: 10rem 4rem;
+  text-align: center;
+  transform: translateY(0px);
+  transition: 0.5s ease;
+  z-index: -1;
+}
+
+.card-heading {
+  font-size: 0.7rem;
+  grid-area: heading;
+  opacity: 0.6;
+  text-align: center;
+  transition: 0.5s ease;
+}
+
+.card-image {
+  background: url("images/image1.jpg");
+  background-size: cover;
+  border-radius: 9rem 9rem 9rem 9rem;
+  grid-area: image;
+  opacity: 0.6;
+  transition: 0.5s ease;
+}
+
+.card-text {
+  align-items: center;
+  border-radius: 1.2rem 1.2rem;
+  display: flex;
+  font-size:1rem;
+  font-weight: 500;
+  grid-area: text;
+}
+
+.card-button {
+  background-color: rgb(194, 193, 196, 0.3);
+  display: flex;
+  font-size: 1.2rem;
+  font-weight:normal;
+  grid-area: button;
+  justify-content: center;
+}
+
+.card-button a{
+  color: rgb(20, 122, 255);
+  display: flex;
+  padding-top: 1rem;
+  text-decoration: none;
+}
+
+.card:hover .cardFace1{
+  border-radius: 1.2rem 1.2rem 0rem 0rem;
+  box-shadow: 5px 0px 12px rgba(0,0,0,1);
+  grid-template-areas: "heading" "image" ;
+  grid-template-columns: 22rem;
+  grid-template-rows: 4rem 18rem ;
+  transform: translateY(50px);
+}
+
+.card:hover .cardFace2{
+  border-radius: 0rem 0rem 1.8rem 1.8rem;
+  box-shadow: 5px 5px 12px rgba(0,0,0,1);
+  grid-template-areas:  "text" "button";
+  grid-template-columns: 22rem;
+  grid-template-rows: 9rem 4rem;
+  transform: translateY(2.8rem);
+}
+
+.card:hover .card-heading{
+  font-size: 1rem;
+  opacity: 1;
+}
+
+.card:hover .card-image{
+  border-radius: 0rem 0rem 0rem 0rem;
+  opacity: 1;
+}
+
+.card:hover .card-text{
+border-radius: 0rem 0rem;
+}
+
+.card:hover .card-button a:hover{
+  opacity: 0.3;
+}
+
+.card:hover .card-button{
+  border-radius: 0rem 0rem 1.8rem 1.8rem;
+}
